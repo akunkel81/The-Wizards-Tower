@@ -1,28 +1,31 @@
 using UnityEngine;
 
-public class priceChange : MonoBehaviour
+public class PriceChange : MonoBehaviour
 {
-    public ItemsLoader loader = GameManager.Instance.itemsLoader;
-    public float priceChangeAmount = 1.2f; // Example: 20% price change increase
+    public float priceIncreaseAmount = 1.2f;
+    public float priceDecreaseAmount = 0.8f;
 
-    public void ApplyPriceChange()
+    public void ApplyIncrease()
     {
-        if (loader == null || loader.itemsRoot == null || loader.itemsRoot.items == null || loader.itemsRoot.items.potions == null)
+        ApplyMultiplier(priceIncreaseAmount);
+    }
+
+    public void ApplyDecrease()
+    {
+        ApplyMultiplier(priceDecreaseAmount);
+    }
+
+    private void ApplyMultiplier(float multiplier)
+    {
+        if (GameManager.Instance == null)
         {
-            Debug.LogError("priceChange: Items data not loaded correctly.");
+            Debug.LogError("PriceChange: GameManager missing.");
             return;
         }
 
-        foreach (var potion in loader.itemsRoot.items.potions)
-        {
-            potion.sellPrice = Mathf.RoundToInt(potion.sellPrice * priceChangeAmount);
-        }
+        // Player affects potion sell prices only
+        GameManager.Instance.potionSellMultiplier *= multiplier;
 
-        Debug.Log("Applied price change to all potions. New prices:");
-        foreach (var potion in loader.itemsRoot.items.potions)
-        {
-            Debug.Log(potion.name + ": " + potion.sellPrice);
-        }
+        FindFirstObjectByType<PriceStatusDisplay>()?.UpdateDisplay();
     }
-
 }
