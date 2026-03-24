@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7235cc72a171afc419251d01eb9d488c, type: 3}
+  m_Name: Miner
+  m_EditorClassIdentifier: Assembly-CSharp::NPCsSO
+  headSprite: {fileID: 0}
+  overworldSprite: {fileID: 0}
+  characterName: Miner
+  characterCoinCount: 60
+  ingredientOffers:
+  - ingredient: {fileID: 11400000, guid: 4554beafc884eda45b2d216e298e768b, type: 2}
+    baseAmount: 5
+  - ingredient: {fileID: 11400000, guid: f8f91439b80e1c94ea17bf84b4ead8dd, type: 2}
+    baseAmount: 3
+  - ingredient: {fileID: 11400000, guid: d52f5b55d238cee43ad73b20e1c2562a, type: 2}
+    baseAmount: 3
+  potionRequests:
+  - potion: {fileID: 11400000, guid: e729868086d559f488c9ab745715efb4, type: 2}
+    requestAmount: 1
+  - potion: {fileID: 11400000, guid: 865e985377dcb3b4eb06f09954d993c4, type: 2}
+    requestAmount: 1
+  yearOneGraph: {fileID: 11400000, guid: 6954dce753230e24b8cc1a3636b97f06, type: 2}
+  goodYearGraph: {fileID: 11400000, guid: 6c3de2da98f0cbd468e3882c24bba5e1, type: 2}
+  badYearGraph: {fileID: 11400000, guid: b0131ac445a89084699cf246e9b5fac8, type: 2}

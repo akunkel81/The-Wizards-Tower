@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7235cc72a171afc419251d01eb9d488c, type: 3}
+  m_Name: Farmer
+  m_EditorClassIdentifier: Assembly-CSharp::NPCsSO
+  headSprite: {fileID: 0}
+  overworldSprite: {fileID: 0}
+  characterName: Farmer
+  characterCoinCount: 50
+  ingredientOffers:
+  - ingredient: {fileID: 11400000, guid: bf804106b9c459f4fb6f1847bd2dccd4, type: 2}
+    baseAmount: 5
+  - ingredient: {fileID: 11400000, guid: 5da3a3ae94b202a48939a496662860c7, type: 2}
+    baseAmount: 3
+  - ingredient: {fileID: 11400000, guid: d8b2c95d1b8dbd14c92659e3fdccedb7, type: 2}
+    baseAmount: 3
+  potionRequests:
+  - potion: {fileID: 11400000, guid: a81d52f4fd03fc449b5c50ad74bfb3fe, type: 2}
+    requestAmount: 1
+  - potion: {fileID: 11400000, guid: 1cd59498cb26dc64d9b9d17386d6ab90, type: 2}
+    requestAmount: 1
+  yearOneGraph: {fileID: 11400000, guid: 8468f9ef77bb71049ae6d342b1d48730, type: 2}
+  goodYearGraph: {fileID: 11400000, guid: 75216b0dd48ae454492b444cbd4982c9, type: 2}
+  badYearGraph: {fileID: 11400000, guid: cd2a743c07a881f48b96f6edc4db68e3, type: 2}
